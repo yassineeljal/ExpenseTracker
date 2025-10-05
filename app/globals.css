@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --bg: 246 246 246;      /* #f6f6f6 */
+  --fg: 17 17 17;         /* #111 */
+  --muted: 115 115 115;   /* #737 */
+  --card: 255 255 255;    /* #fff */
+  --border: 229 231 235;  /* #e5e7eb */
+}
+.dark {
+  --bg: 12 12 12;         /* #0c0c0c */
+  --fg: 235 235 235;      /* #ebebeb */
+  --muted: 160 160 160;   /* #a0a0a0 */
+  --card: 20 20 20;       /* #141414 */
+  --border: 38 38 38;     /* #262626 */
+}
+
+@layer base {
+  html, body { @apply h-full; }
+  body {
+    color: rgb(var(--fg));
+    background-color: rgb(var(--bg));
+  }
+}
+
+/* Utiles */
+@layer components {
+  .container-app { @apply max-w-6xl mx-auto px-4 py-6; }
+}
+
